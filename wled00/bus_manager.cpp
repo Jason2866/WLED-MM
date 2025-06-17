@@ -849,13 +849,7 @@ BusHub75Matrix::BusHub75Matrix(const BusConfig &bc) : Bus(bc.type, bc.start, bc.
 
 //  HUB75_I2S_CFG::i2s_pins _pins={R1_PIN, G1_PIN, B1_PIN, R2_PIN, G2_PIN, B2_PIN, A_PIN, B_PIN, C_PIN, D_PIN, E_PIN, LAT_PIN, OE_PIN, CLK_PIN};
 
-#if defined(ARDUINO_ADAFRUIT_MATRIXPORTAL_ESP32S3) // MatrixPortal ESP32-S3
-
-  // https://www.adafruit.com/product/5778
-  DEBUGBUS_PRINTLN("MatrixPanel_I2S_DMA - Matrix Portal S3 config");
-  mxconfig.gpio = { 42, 41, 40, 38, 39, 37,  45, 36, 48, 35, 21, 47, 14, 2 };
-
-#elif defined(HUB75_WF2) // board Huidu WF2 with ESP32-S3 
+#if defined(HUB75_WF2) // board Huidu WF2 with ESP32-S3 
   DEBUGBUS_PRINTLN("Huidu HUB75-WF2 - S3 no PSRAM");
   // HUB75_I2S_CFG::i2s_pins _pins={R1_PIN, G1_PIN, B1_PIN, R2_PIN, G2_PIN, B2_PIN, A_PIN, B_PIN, C_PIN, D_PIN, E_PIN, LAT_PIN, OE_PIN, CLK_PIN};
   mxconfig.gpio = {2, 6, 10, 3, 7, 11, 39, 38, 37, 36, 21, 33, 35, 34};
