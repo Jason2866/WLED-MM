@@ -5,7 +5,7 @@
     "extraScript": "setup_deps.py"
   }
   "dependencies": {
-	  "Temperature","",
-	  "sht",""
+	  "Temperature":"",
+	  "sht":""
   }
 }
