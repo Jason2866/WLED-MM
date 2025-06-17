@@ -4,4 +4,8 @@
     "libArchive": false,
     "extraScript": "setup_deps.py"
   }
+  "dependencies": {
+	  "Temperature","",
+	  "sht",""
+  }
 }
